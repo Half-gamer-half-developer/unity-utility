@@ -25,7 +25,13 @@ namespace UnityExtensions.General
       /// <param name="color">color of the returned text</param>
 
       /// <returns>the original string with added html color tags before and after</returns>
-      public static string GetColoredStringHTML(this string text, Color color) => "<color=#" + UnityEngine.ColorUtility.ToHtmlStringRGBA(color) + ">" + text + "</color>";
+      public static string GetColoredStringHTML(this string text, Color color) 
+      {
+         string colorLowered = ColorUtility.ToHtmlStringRGB(color);
+         return $"<color=#{colorLowered}><b> {text} </b></color>";
+         //info to prevent more string alloc
+         //return "<color=#" + UnityEngine.ColorUtility.ToHtmlStringRGBA(color) + ">" + text + "</color>";
+      } 
    }
 }
 

@@ -18,5 +18,20 @@ namespace UnityExtensions.Vectors
 
       /// <returns>a <c>Vector3</c> from original value's x, optional <paramref name="y"/> parameter and original value's z element</returns>
       public static Vector3 FromTopdown(this Vector2 vector, float y = 0) => new Vector3(vector.x, y, vector.y);
+
+      //TODO
+      /// <summary>
+      /// 
+      /// </summary>
+      /// <param name="vector"></param>
+      /// <param name="onNormal"></param>
+      /// <returns></returns>
+      public static Vector2 ProjectVector2(Vector2 vector, Vector2 onNormal)
+      {
+         onNormal.Normalize();
+         float calculatedMagnitude = Mathf.Cos(Vector2.Angle(onNormal, vector.normalized) * Mathf.Deg2Rad);
+         calculatedMagnitude *= vector.magnitude;
+         return onNormal * calculatedMagnitude;
+      } 
    }
 }
