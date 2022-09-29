@@ -7,7 +7,7 @@ namespace UnityExtensions.MathUtility
     public static class MathUtilities 
     {
         /// <summary>
-        /// Returns remaped value based on parameters.
+        /// Returns remapped value based on parameters.
         /// </summary>
         /// <param name="iMin">Minimum Input</param>
         /// <param name="iMax">Maximum Input</param>
