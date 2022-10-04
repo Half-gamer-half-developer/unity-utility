@@ -1,0 +1,10 @@
+{
+   "name": "com.half-gamer-half-developer.unity-extensions",
+   "version": "0.1",
+   "displayName": "UnityExtensions",
+   "description": "UnityExtensions is a collection of well used functions for Unity",
+   "unity": "2021.3",
+   "author": {
+      "name": "Half Gamer Half Developer"
+   }
+}
